@@ -22,15 +22,14 @@ let headers = rows[0].split(',');
 // iterates each row excluding the header
 for (let i = 1; i < rows.length; i++) {  
     let rowData = rows[i].split(',');  
-    arrData[i - 1] = {}; 
+    let obj = {};
 
-    // iterates over the headers array
+    // iterates over the headers array and match pairs
     for (let j = 0; j < headers.length; j++) {
-        console.log(headers[j]); 
-        console.log(rowData[j]); 
-
-        
+        obj[headers[j].toLowerCase()] = rowData[j];
     }
+    arrData.push(obj);
 }
+
 
 console.log(arrData);
