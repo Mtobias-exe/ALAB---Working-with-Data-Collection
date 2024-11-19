@@ -26,7 +26,7 @@ for (let i = 1; i < rows.length; i++) {
 
     // iterates over the headers array and match pairs
     for (let j = 0; j < headers.length; j++) {
-        obj[headers[j].toLowerCase()] = rowData[j];
+        obj[headers[j].toLowerCase()] = rowData[j]; 
     }
     arrData.push(obj);
 }
@@ -35,5 +35,14 @@ arrData.pop();
 arrData.splice(1, 0, { id: "48", name: "Barry", occupation: "Runner", age: "25" });
 arrData.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" });
 
+// average age
+let totalAge = 0;
+let people = arrData.length;
 
-console.log(arrData);
+for (let i = 0; i < people; i++) {
+let num = Number(arrData[i].age)  //converts string into integer 
+totalAge += num; 
+}
+
+console.log(arrData); 
+console.log(`Average age is ${totalAge / people}`);
