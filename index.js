@@ -30,6 +30,10 @@ for (let i = 1; i < rows.length; i++) {
     }
     arrData.push(obj);
 }
+// Part 4: Sorting and Manipulating Data
+arrData.pop();
+arrData.splice(1, 0, { id: "48", name: "Barry", occupation: "Runner", age: "25" });
+arrData.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" });
 
 
 console.log(arrData);
